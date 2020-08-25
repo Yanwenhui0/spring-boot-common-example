@@ -1,0 +1,44 @@
+{
+  "groups": [
+    {
+      "name": "spring.zookeeper",
+      "type": "spring.boot.common.zookeeper.config.ZookeeperProperties",
+      "sourceType": "spring.boot.common.zookeeper.config.ZookeeperProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring.zookeeper.connect-time-out",
+      "type": "java.lang.Integer",
+      "describe": "connect time out",
+      "sourceType": "spring.boot.common.zookeeper.config.ZookeeperProperties",
+      "defaultValue": 5000
+    },
+    {
+      "name": "spring.zookeeper.host",
+      "type": "java.lang.String",
+      "describe": "host and port",
+      "sourceType": "spring.boot.common.zookeeper.config.ZookeeperProperties"
+    },
+    {
+      "name": "spring.zookeeper.name-space",
+      "type": "java.lang.String",
+      "describe": "namespace",
+      "sourceType": "spring.boot.common.zookeeper.config.ZookeeperProperties"
+    },
+    {
+      "name": "spring.zookeeper.retry-policy",
+      "type": "java.lang.String",
+      "description": "exponential-backoff-retry: 重试指定的次数, 且每一次重试之间停顿的时间逐渐增加 retry-n-times: 指定最大重试次数的重试策略 retry-one-time: 只重试一次 retry-forever: 永远重试 retry-until-elapsed: 一直重试直到达到规定的时间",
+      "sourceType": "spring.boot.common.zookeeper.config.ZookeeperProperties",
+      "defaultValue": "retry-until-elapsed"
+    },
+    {
+      "name": "spring.zookeeper.session-time-out",
+      "type": "java.lang.Integer",
+      "sourceType": "spring.boot.common.zookeeper.config.ZookeeperProperties",
+      "defaultValue": 5000
+    }
+  ],
+  "hints": []
+}
