@@ -21,33 +21,6 @@
         <commons-lang.version>3.9</commons-lang.version>
     </properties>
 
-    <!-- 发布项目到 Nexus -->
-    <distributionManagement>
-        <repository>
-            <id>nexus-releases</id>
-            <url>http://47.113.199.232/repository/maven-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>nexus-snapshots</id>
-            <url>http://47.113.199.232/repository/maven-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
-
-<!--    <repositories>-->
-<!--        <repository>-->
-<!--            <id>aliyun</id>-->
-<!--            <name>aliyun</name>-->
-<!--            <url>https://maven.aliyun.com/repository/public</url>-->
-<!--            <releases>-->
-<!--                <enabled>true</enabled>-->
-<!--            </releases>-->
-<!--            <snapshots>-->
-<!--                <enabled>false</enabled>-->
-<!--            </snapshots>-->
-<!--        </repository>-->
-<!--    </repositories>-->
-
-
     <modules>
         <module>common-zookeeper</module>
     </modules>
@@ -70,5 +43,30 @@
         </dependencies>
     </dependencyManagement>
 
+    <!-- 发布项目到 Nexus -->
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <url>http://47.113.199.232/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <url>http://47.113.199.232/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>nexus-public</id>
+            <name>nexus-public</name>
+            <url>http://47.113.199.232/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
 </project>

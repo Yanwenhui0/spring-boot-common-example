@@ -10,6 +10,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = "spring.zookeeper")
 public class ZookeeperProperties {
 
+    /**
+     * 主机地址
+     */
     private String host;
 
     /**
@@ -21,10 +24,19 @@ public class ZookeeperProperties {
      */
     private String retryPolicy = "retry-until-elapsed";
 
+    /**
+     * session 过期时间
+     */
     private int sessionTimeOut = 5000;
 
+    /**
+     * connect 过期时间
+     */
     private int connectTimeOut = 5000;
 
+    /**
+     * 命名空间
+     */
     private String nameSpace;
 
     public String getHost() {
